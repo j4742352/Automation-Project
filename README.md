@@ -1,4 +1,5 @@
 How Set up a local Selenium environment
+---------------------------------------------------------------------------------------
 
 Step 1: Download or Update your IDE of Eclipse either IntelliJ IDEA.
 
@@ -16,9 +17,9 @@ incorporate Java packages to your IDE.
 Step 5:Apply manual testing techniques and test automation using
 Selenium, perform bug reporting,and deliver test documentation and
 reports to features and functions of your web application code.
-
+------------------------------------------------------------------------------------
 Selenium Testing Automation of OrangeHRM
-
+------------------------------------------------------------------------------------
 The web application of OrangeHRM automate testing of the functionality
 features which focus on are:
 
