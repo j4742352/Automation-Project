@@ -328,5 +328,6 @@ private WebElement generalinformationBtn;
 
 
     }
-
+       public static class ExternalClass4 extends WebDriver {
+    }
 }
