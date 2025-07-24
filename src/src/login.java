@@ -21,6 +21,22 @@ public class login  {
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
 
+
+    BrowserFactory.driver = BrowserFactory.startBrowser("Chrome","http://localhost:8080/cleo");
+    LoginPage loginPage=new LoginPage(BrowserFactory.driver);
+    KundenverwaltungPage kundenVerwaltungPage = new KundenverwaltungPage(BrowserFactory.driver);
+
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("makler1", "12345a");
+
+    assertTrue(kundenVerwaltungPage.isInitialized());
+
+
+
+        
+
+        //
         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
         WebDriver driver = (WebDriver) driver1;// not used variable of driver and no value = , apply to the code
