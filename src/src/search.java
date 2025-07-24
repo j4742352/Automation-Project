@@ -33,7 +33,7 @@ private WebElement disabledBtn;
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
    login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-String az;
+String az="";
         String fn = obj.az;
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
@@ -110,7 +110,7 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
        login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-String az;
+String az="";
         String fn = obj.az;
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
@@ -165,7 +165,7 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
        login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-String az;
+String az="";
         String fn = obj.az;
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
 LoginPage loginPage=new LoginPage(Connection.driver);
@@ -199,7 +199,7 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
        login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-String az;
+String az="";
         String fn = obj.az;
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
