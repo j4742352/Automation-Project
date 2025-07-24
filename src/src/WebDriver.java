@@ -18,6 +18,7 @@ public static WebDriver startBrowser(String browserName, String url) throws Exce
 
    if (browserName.equalsIgnoreCase("Chrome")) {
         driver = new ChromeDriver();
+          driver.get("https://opensource-demo.orangehrmlive.com/");
     }else {
         System.out.println("Browser not found!");
         throw new Exception("Browser not found!");
