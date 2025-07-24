@@ -37,7 +37,7 @@ obj.startBrowser(String browserName, String url);
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -48,7 +48,7 @@ obj.startBrowser(String browserName, String url);
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForleaveTab ())).click();
+        LPPPage.findElement(By.id(waitForleaveTab ())).click();
 
 
         
@@ -58,10 +58,10 @@ obj.startBrowser(String browserName, String url);
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+        LPPPage .findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.quit();
+      LPPPage .quit();
 
     }
 
@@ -113,7 +113,7 @@ obj.startBrowser(String browserName, String url);
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -124,7 +124,7 @@ obj.startBrowser(String browserName, String url);
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForadminTab ())).click();
+     LPPPage.findElement(By.id(waitForadminTab ())).click();
 
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
@@ -150,13 +150,13 @@ obj.startBrowser(String browserName, String url);
 
         input.close(); // Close the scanner
 
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+       LPPPage.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
 
         Thread.sleep(3000);
 
-        driver1.quit();
+       LPPPage.quit();
 }
 
     @Test
@@ -167,7 +167,7 @@ obj.startBrowser(String browserName, String url);
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -179,16 +179,16 @@ obj.startBrowser(String browserName, String url);
         Thread.sleep(3000);
 
       //adminTab
-        driver1.findElement(By.id(waitForadminTab ())).click();
+        LPPPage.findElement(By.id(waitForadminTab ())).click();
        EmployeeNameText.findElement(By.xpath("//textarea"));
         EmployeeNameText.sendKeys("Employee Name");
         Thread.sleep(3000);
 
         //searchBtn
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+        LPPPage.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.quit();
+       LPPPage .quit();
     }
 
 
@@ -200,7 +200,7 @@ obj.startBrowser(String browserName, String url);
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -209,7 +209,7 @@ obj.startBrowser(String browserName, String url);
     assertTrue(LPPage.isInitialized());
         Thread.sleep(3000);
 
-        driver1.findElement(By.id(waitForadminTab ())).click();
+       LPPPage.findElement(By.id(waitForadminTab ())).click();
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
 
@@ -223,12 +223,12 @@ obj.startBrowser(String browserName, String url);
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
 
-                driver1.findElement(By.id(waitForenabledBtn ())).click();
+               LPPPage.findElement(By.id(waitForenabledBtn ())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
 
-                driver1.findElement(By.id(waitFordisabledBtn ())).click();
+               LPPPage.findElement(By.id(waitFordisabledBtn ())).click();
 
                 break;
             default: // If none of the above cases match
@@ -238,10 +238,10 @@ obj.startBrowser(String browserName, String url);
 
         input.close(); // Close the scanner
 
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+       LPPPage .findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.quit();
+        LPPPage .quit();
 
     }
        public static class ExternalClass5 extends WebDriver {
