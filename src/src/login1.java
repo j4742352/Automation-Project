@@ -12,56 +12,52 @@ import java.time.Duration;
 
 import static javax.swing.UIManager.get;
 
-public class login1  {
-private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-private WebElement username;
-private WebElement password;
-private WebElement loginBtn;
-private WebElement profileDropdown;
-public static WebDriver driver;
-    
-@Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(String browserName){
+
+public class login  {
+    private ChromeDriver driver = new ChromeDriver();
+    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private WebElement profileDropdown;
+    @Test
+    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
+
+login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
+    assertTrue(loginPage.isInitialized());
 
-        
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
+    loginPage.loginCleo("Admin", "admin123");
 
+    assertTrue(LPPage.isInitialized());
 
-
-        driver1.manage().window().maximize();
-
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
-
-        try {
+  try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-
-        driver1.quit();
-
+LPPPage.quit();
+        
     }
 
     public String waitForusername() {
 
 
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("Admin")));
 
         return username.getText();
     }
     public String waitForpassword() {
-        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("admin123")));
 
         return password.getText();
     }
@@ -75,25 +71,29 @@ public static WebDriver driver;
 
         return  profileDropdown.getText();
     }
-    
+
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-         Webdriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
 
+        login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+    loginPage.loginCleo("Admin", "admin123");
 
+    assertTrue(LPPage.isInitialized());
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -101,7 +101,7 @@ public static WebDriver driver;
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+        LPPPage.quit();
 
 
     }
@@ -110,21 +110,25 @@ public static WebDriver driver;
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
     {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+ login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+    loginPage.loginCleo("Admin", "admin123");
 
+    assertTrue(LPPage.isInitialized());
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+           LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
@@ -132,28 +136,33 @@ public static WebDriver driver;
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-        driver1.quit();
-}
+       LPPPage.quit();
+    }
 
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
 
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+        LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -161,28 +170,33 @@ public static WebDriver driver;
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+       LPPPage.quit();
 
     }
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
     {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = driver1; // not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+       login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+          LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -190,9 +204,10 @@ public static WebDriver driver;
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+       LPPPage.quit();
 
 
     }
+    
 }
 
