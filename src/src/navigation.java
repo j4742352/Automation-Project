@@ -37,7 +37,7 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
- login obj = new ExternalClass4(); // calling external class of login
+ login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
 
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
@@ -74,22 +74,22 @@ obj.startBrowser(String browserName, String url);
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println(" My Records");
-                driver1.findElement(By.id(waitForBtn() )).click();
+               LPPPage.findElement(By.id(waitForBtn() )).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println(" Punch In/Out");
-                driver1.findElement(By.id(waitForBtn() )).click();
+                LPPPage.findElement(By.id(waitForBtn() )).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Employee Records");
-                driver1.findElement(By.id(waitForBtn() )).click();
+                LPPPage.findElement(By.id(waitForBtn() )).click();
 
                 break; // Exit the switch statement
             case 4: // If choice is 2
                 System.out.println("Configuration");
-                driver1.findElement(By.id(waitForBtn() )).click();
+                LPPPage.findElement(By.id(waitForBtn() )).click();
 
                 break;
             default: // If none of the above cases match
@@ -189,7 +189,7 @@ obj.startBrowser(String browserName, String url);
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
-login obj = new ExternalClass4(); // calling external class of login
+login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
 
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
@@ -206,7 +206,7 @@ obj.startBrowser(String browserName, String url);
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForadminTab())).click();
+      LPPPage.findElement(By.id(waitForadminTab())).click();
 
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
@@ -222,17 +222,17 @@ obj.startBrowser(String browserName, String url);
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Project Reports ");
-                driver1.findElement(By.id(waitForBtn())).click();
+               LPPPage.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Employee Reports ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                LPPPage.findElement(By.id(waitForBtn())).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Attendance Summary ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                LPPPage.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             default: // If none of the above cases match
@@ -265,7 +265,7 @@ obj.startBrowser(String browserName, String url);
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
-  login obj = new ExternalClass4(); // calling external class of login
+  login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
 
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
@@ -297,12 +297,12 @@ obj.startBrowser(String browserName, String url);
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Customers ");
-                driver1.findElement(By.id(waitForBtn())).click();
+              LPPPage.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Projects ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                LPPPage.findElement(By.id(waitForBtn())).click();
 
                 break;
             default: // If none of the above cases match
@@ -336,6 +336,6 @@ obj.startBrowser(String browserName, String url);
 
 
     }
-       public static class ExternalClass4 extends WebDriver {
+       public static class ExternalClass5 extends WebDriver {
     }
 }
