@@ -21,29 +21,24 @@ public class login  {
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
 
+login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-    BrowserFactory.driver = BrowserFactory.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
-    LoginPage loginPage=new LoginPage(BrowserFactory.driver);
-    KundenverwaltungPage kundenVerwaltungPage = new KundenverwaltungPage(BrowserFactory.driver);
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
 
     assertTrue(loginPage.isInitialized());
 
-    loginPage.loginCleo("makler1", "12345a");
+    loginPage.loginCleo("Admin", "admin123");
 
-    assertTrue(kundenVerwaltungPage.isInitialized());
+    assertTrue(LPPage.isInitialized());
 
-//
 
-         login obj = new ExternalClass4(); // calling external class of login
-                obj.startBrowser(String browserName, String url);
-
-        
-
-        //
         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
         WebDriver driver = (WebDriver) driver1;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
+        driver.get("https://opensource-demo.orangehrmlive.com/");
 
 
 
