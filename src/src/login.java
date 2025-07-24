@@ -206,4 +206,6 @@ public class login  {
 
 
     }
+        public static class ExternalClass extends WebDriver {
+    }
 }
