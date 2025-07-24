@@ -12,11 +12,7 @@ import java.time.Duration;
 
 public class login  {
     private ChromeDriver driver = new ChromeDriver();
-    private WebDriver driver1 = driver;
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private WebElement username;
-    private WebElement password;
-    private WebElement loginBtn;
     private WebElement profileDropdown;
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
