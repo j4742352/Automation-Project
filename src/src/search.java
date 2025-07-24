@@ -31,16 +31,19 @@ private  WebElement enabledBtn;
 private WebElement disabledBtn;
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+   login obj = new ExternalClass5(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         Thread.sleep(3000);
 
@@ -104,12 +107,19 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+       login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         Thread.sleep(3000);
 
@@ -151,16 +161,19 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
-        //username
+       login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
 
         Thread.sleep(3000);
@@ -181,16 +194,19 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
-        WebDriverWait wait = (WebDriverWait) Duration.ofSeconds(10);
+       login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
         Thread.sleep(3000);
 
         driver1.findElement(By.id(waitForadminTab ())).click();
@@ -228,7 +244,7 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
         driver1.quit();
 
     }
-       public static class ExternalClass4 extends WebDriver {
+       public static class ExternalClass5 extends WebDriver {
     }
 
 }
