@@ -13,19 +13,21 @@ import java.time.Duration;
 import static javax.swing.UIManager.get;
 
 public class login1  {
-private WebDriver driver;
 private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 private WebElement username;
 private WebElement password;
 private WebElement loginBtn;
 private WebElement profileDropdown;
-
+public static WebDriver driver;
+    
 @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-
+    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(String browserName){
+        
         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = (WebDriver) driver1;// not used variable of driver and no value = , apply to the code
+
+        
+        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
         driver1.get("https://opensource-demo.orangehrmlive.com/");
 
 
