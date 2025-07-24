@@ -208,6 +208,7 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
 
 
     }
-    
+    public static class ExternalClass4 extends WebDriver {
+    }
 }
 
