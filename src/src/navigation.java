@@ -37,9 +37,9 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
-
+ System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver =  System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        WebDriver driver =null;//
         driver1.get("https://opensource-demo.orangehrmlive.com/");
         driver1.manage().window().maximize();
 
@@ -188,9 +188,9 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
-
+ System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver =  System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        WebDriver driver = null;
         driver1.get("https://opensource-demo.orangehrmlive.com/");
         driver1.manage().window().maximize();
 
@@ -261,9 +261,9 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
-        
+         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver =  System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        WebDriver driver =  null;
         driver1.get("https://opensource-demo.orangehrmlive.com/");
         driver1.manage().window().maximize();
 
@@ -274,7 +274,7 @@ private WebElement generalinformationBtn;
 
 
         driver1.findElement(By.id(waitFortimeTab() )).click();
-// //
+
         driver1.findElement(By.id( waitForprojectInfoBtn() )).click();
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
