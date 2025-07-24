@@ -228,6 +228,7 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
         driver1.quit();
 
     }
-
+       public static class ExternalClass4 extends WebDriver {
+    }
 
 }
