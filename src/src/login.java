@@ -24,7 +24,7 @@ String az="";
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -35,15 +35,14 @@ String az="";
   try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-
-driver.quit();
+LPPPage.quit();
         
     }
 
@@ -80,7 +79,7 @@ String az="";
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -91,7 +90,7 @@ String az="";
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -99,7 +98,7 @@ String az="";
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+        LPPPage.quit();
 
 
     }
@@ -115,7 +114,7 @@ String az="";
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
 LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -126,7 +125,7 @@ LoginPage loginPage=new LoginPage(Connection.driver);
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+           LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
@@ -134,7 +133,7 @@ LoginPage loginPage=new LoginPage(Connection.driver);
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-        driver1.quit();
+       LPPPage.quit();
     }
 
 
@@ -149,7 +148,7 @@ String az="";
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -160,7 +159,7 @@ String az="";
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+        LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -168,7 +167,7 @@ String az="";
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+       LPPPage.quit();
 
     }
 
@@ -182,7 +181,7 @@ String az="";
   Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
- driver.get("https://opensource-demo.orangehrmlive.com/");
+LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
     assertTrue(loginPage.isInitialized());
 
@@ -194,7 +193,7 @@ String az="";
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+          LPPPage.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -202,7 +201,7 @@ String az="";
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+       LPPPage.quit();
 
 
     }
