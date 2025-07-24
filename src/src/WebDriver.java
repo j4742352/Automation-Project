@@ -12,7 +12,7 @@ public class Connection{ // this is the class of connection of Chromedriver
 public static Webdriver driver;
 
 @BeforeClass
-public static WebDriver startBrowser(String browserName, String url) throws Exception {
+public static WebDriver startBrowser(String browserName, String url) throws Exception {// method of StartBrowser declares the Strings of browserName and url
 
     System.setProperty("webdriver.chrome.driver","C:\\selenium-driver\\chromedriver.exe");
 
