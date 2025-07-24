@@ -18,9 +18,6 @@ import static org.junit.Assert.*;
 public class navigation {
     private WebDriver driver;
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private WebElement username;
-    private WebElement password;
-    private WebElement loginBtn;
     private WebElement Btn;
     private WebElement timeTab;
     private WebElement attendanceBtn;
