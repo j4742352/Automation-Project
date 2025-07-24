@@ -52,9 +52,9 @@ private WebElement profileDropdown;
     }
 
     public String waitForusername() {
-String v1 = "Admin";
 
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(v1)));
+
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 
         return username.getText();
     }
@@ -73,11 +73,12 @@ String v1 = "Admin";
 
         return  profileDropdown.getText();
     }
+    
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
+         Webdriver driver = null;// not used variable of driver and no value = , apply to the code
         driver1.get("https://opensource-demo.orangehrmlive.com/");
         driver1.manage().window().maximize();
 
@@ -167,7 +168,7 @@ String v1 = "Admin";
     {
         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
         ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
+        WebDriver driver = driver1; // not used variable of driver and no value = , apply to the code
         driver1.get("https://opensource-demo.orangehrmlive.com/");
         driver1.manage().window().maximize();
 
