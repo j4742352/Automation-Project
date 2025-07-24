@@ -27,28 +27,15 @@ obj.startBrowser(String browserName, String url);
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
-
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
     assertTrue(loginPage.isInitialized());
 
     loginPage.loginCleo("Admin", "admin123");
 
     assertTrue(LPPage.isInitialized());
 
-
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = (WebDriver) driver1;// not used variable of driver and no value = , apply to the code
-        driver.get("https://opensource-demo.orangehrmlive.com/");
-
-
-
-        driver1.manage().window().maximize();
-
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
-
-        try {
+  try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
             driver1.findElement(By.id(waitForprofileDropdown())).click();
@@ -59,8 +46,8 @@ obj.startBrowser(String browserName, String url);
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
-
+driver.quit();
+        
     }
 
     public String waitForusername() {
@@ -88,17 +75,20 @@ obj.startBrowser(String browserName, String url);
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
 
+        login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         try {
 
@@ -120,16 +110,19 @@ obj.startBrowser(String browserName, String url);
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
     {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+ login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         try {
 
@@ -150,15 +143,19 @@ obj.startBrowser(String browserName, String url);
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
 
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
         try {
 
@@ -178,15 +175,19 @@ obj.startBrowser(String browserName, String url);
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
     {
-        System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;// not used variable of driver and no value = , apply to the code
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+       login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id(waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword())).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPage.isInitialized());
 
 
         try {
