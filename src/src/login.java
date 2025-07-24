@@ -32,7 +32,10 @@ public class login  {
 
     assertTrue(kundenVerwaltungPage.isInitialized());
 
+//
 
+         login obj = new ExternalClass(); // calling external class of login
+                obj.LoginFunction();
 
         
 
