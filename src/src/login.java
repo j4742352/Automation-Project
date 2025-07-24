@@ -22,7 +22,7 @@ public class login  {
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
 
 
-    BrowserFactory.driver = BrowserFactory.startBrowser("Chrome","http://localhost:8080/cleo");
+    BrowserFactory.driver = BrowserFactory.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(BrowserFactory.driver);
     KundenverwaltungPage kundenVerwaltungPage = new KundenverwaltungPage(BrowserFactory.driver);
 
@@ -34,8 +34,8 @@ public class login  {
 
 //
 
-         login obj = new ExternalClass(); // calling external class of login
-                obj.LoginFunction();
+         login obj = new ExternalClass4(); // calling external class of login
+                obj.startBrowser(String browserName, String url);
 
         
 
@@ -209,6 +209,6 @@ public class login  {
 
 
     }
-        public static class ExternalClass extends WebDriver {
+        public static class ExternalClass4 extends WebDriver {
     }
 }
