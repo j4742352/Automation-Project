@@ -31,10 +31,11 @@ private  WebElement enabledBtn;
 private WebElement disabledBtn;
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
-   login obj = new ExternalClass5(); // calling external class of login
+   login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+String az;
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
  LPPPage.get("https://opensource-demo.orangehrmlive.com/");
@@ -107,10 +108,11 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
-       login obj = new ExternalClass4(); // calling external class of login
+       login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+String az;
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
 LPPPage.get("https://opensource-demo.orangehrmlive.com/");
@@ -161,11 +163,12 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
-       login obj = new ExternalClass4(); // calling external class of login
+       login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
-    LoginPage loginPage=new LoginPage(Connection.driver);
+String az;
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
+LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
 LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         
@@ -194,10 +197,11 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
-       login obj = new ExternalClass4(); // calling external class of login
+       login obj = new ExternalClass6(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+String az;
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
 LPPPage.get("https://opensource-demo.orangehrmlive.com/");
