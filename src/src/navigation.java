@@ -37,24 +37,25 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
- System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver =null;//
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+ login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
+    loginPage.loginCleo("Admin", "admin123");
 
-        driver1.findElement(By.id( waitForusername())).sendKeys("Admin");//exception
-        driver1.findElement(By.id(waitForpassword() )).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
-
+    assertTrue(LPPage.isInitialized());
         Thread.sleep(3000);
 
-        driver1.findElement(By.id(waitFortimeTab() )).click();
+        LPPPage.findElement(By.id(waitFortimeTab() )).click();
 
 
-        driver1.findElement(By.id(waitForattendanceBtn())).click();
+        LPPPage.findElement(By.id(waitForattendanceBtn())).click();
 
 
 
@@ -98,19 +99,19 @@ private WebElement generalinformationBtn;
 
         input.close(); // Close the scanner
 
-        driver1.findElement(By.id(waitForsearchBtn() )).click();
+       LPPPage.findElement(By.id(waitForsearchBtn() )).click();
 
         Thread.sleep(3000);
 
-        driver1.findElement(By.id(waitForadminTab() )).click();
+        LPPPage.findElement(By.id(waitForadminTab() )).click();
 
-        driver1.findElement(By.id(waitForqualificationsBtn ())).click();
+       LPPPage.findElement(By.id(waitForqualificationsBtn ())).click();
 
-        driver1.findElement(By.id(waitForskillsBtn ())).click();
+        LPPPage.findElement(By.id(waitForskillsBtn ())).click();
 
-        driver1.findElement(By.id( waitForaddBtn() )).click();
+       LPPPage.findElement(By.id( waitForaddBtn() )).click();
 
-        driver1.quit();
+       LPPPage.quit();
 }
     public String waitForusername() {
 
@@ -188,16 +189,19 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
- System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver = null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
 
-        driver1.findElement(By.id( waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword() )).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPPage.isInitialized());
 
         Thread.sleep(3000);
 
@@ -240,42 +244,46 @@ private WebElement generalinformationBtn;
 
 
 
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+       LPPPage.findElement(By.id(waitForsearchBtn())).click();
 
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForjobBtn () )).click();
+        LPPPage.findElement(By.id(waitForjobBtn () )).click();
 
 
-        driver1.findElement(By.id(waitForjobtitlesBtn ())).click();
+        LPPPage.findElement(By.id(waitForjobtitlesBtn ())).click();
 
 
-        driver1.findElement(By.id(waitForaddBtn())).click();
+       LPPPage.findElement(By.id(waitForaddBtn())).click();
 
 
-        driver1.quit();
+        LPPPage.quit();
 
 }
 
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
-         System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        ChromeDriver driver1 = new ChromeDriver();
-        WebDriver driver =  null;
-        driver1.get("https://opensource-demo.orangehrmlive.com/");
-        driver1.manage().window().maximize();
+  login obj = new ExternalClass4(); // calling external class of login
+obj.startBrowser(String browserName, String url);
 
-        driver1.findElement(By.id( waitForusername())).sendKeys("Admin");
-        driver1.findElement(By.id(waitForpassword() )).sendKeys("admin123");
-        driver1.findElement(By.id(waitForloginBtn())).click();
+  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+    LoginPage loginPage=new LoginPage(Connection.driver);
+    LPPage LPPPage = new LPPage(Connection.driver);
+ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
+        
+    assertTrue(loginPage.isInitialized());
+
+    loginPage.loginCleo("Admin", "admin123");
+
+    assertTrue(LPPPage.isInitialized());
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitFortimeTab() )).click();
+       LPPPage.findElement(By.id(waitFortimeTab() )).click();
 
-        driver1.findElement(By.id( waitForprojectInfoBtn() )).click();
+        LPPPage.findElement(By.id( waitForprojectInfoBtn() )).click();
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
 
@@ -305,24 +313,24 @@ private WebElement generalinformationBtn;
         input.close(); // Close the scanner
 
 
-        driver1.findElement(By.id(waitForsearchBtn())).click();
+      LPPPage.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.findElement(By.id(waitForadminTab())).click();
+       LPPPage.findElement(By.id(waitForadminTab())).click();
 
 
-        driver1.findElement(By.id(waitFororganizationBtn ())).click();
-
-
-
-        driver1.findElement(By.id(waitForgeneralinformationBtn())).click();
+     LPPPage.findElement(By.id(waitFororganizationBtn ())).click();
 
 
 
-        driver1.findElement(By.id(waitForaddBtn())).click();
+        LPPPage.findElement(By.id(waitForgeneralinformationBtn())).click();
 
 
-        driver1.quit();
+
+       LPPPage.findElement(By.id(waitForaddBtn())).click();
+
+
+       LPPPage.quit();
 
 
 
