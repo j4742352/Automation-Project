@@ -17,10 +17,6 @@ public class search {
 
     private WebDriver driver;
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-    private WebElement username1;
-    private WebElement password;
-    private WebElement loginBtn;
     private WebElement profileDropdown;
     private WebElement searchBtn;
     private   WebElement leaveTab;
