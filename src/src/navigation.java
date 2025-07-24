@@ -39,8 +39,9 @@ private WebElement generalinformationBtn;
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
  login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+        String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
  LPPPage.get("https://opensource-demo.orangehrmlive.com/");
@@ -191,8 +192,9 @@ obj.startBrowser(String browserName, String url);
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
 login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+String az ="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
  LPPPage.get("https://opensource-demo.orangehrmlive.com/");
@@ -267,8 +269,9 @@ obj.startBrowser(String browserName, String url);
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
   login obj = new ExternalClass5(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
-  Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
  LPPPage.get("https://opensource-demo.orangehrmlive.com/");
