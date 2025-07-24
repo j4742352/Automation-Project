@@ -23,7 +23,9 @@ public class login  {
 
 login obj = new ExternalClass4(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
@@ -78,7 +80,9 @@ driver.quit();
 
         login obj = new ExternalClass4(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
@@ -112,7 +116,9 @@ obj.startBrowser(String browserName, String url);
     {
  login obj = new ExternalClass4(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
@@ -145,7 +151,9 @@ obj.startBrowser(String browserName, String url);
 
 login obj = new ExternalClass4(); // calling external class of login
 obj.startBrowser(String browserName, String url);
-
+String az="";
+        String fn = obj.az;
+  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
   Connection.driver = Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe");
     LoginPage loginPage=new LoginPage(Connection.driver);
     LPPage LPPPage = new LPPage(Connection.driver);
