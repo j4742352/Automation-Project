@@ -13,38 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Scanner;
 
-public class login  {
-    private ChromeDriver driver = new ChromeDriver();
-    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private Webriver driver1 =  driver (WebDriver());
-    private WebElement profileDropdown;
-        private WebElement username;
-        private WebElement password;
-        private WebElement loginBtn;
-    @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-	
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().window().maximize();
-
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
-
-  try {
-
-            System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
-
-            System.out.println("Waiting for 6 seconds on the dashboard...");
-            Thread.sleep(6000);
-        } catch (Exception e) {
-            System.out.println("Login Test Failed – Dashboard not detected");
-        }
-driver1.quit();
-        
-    }
-
 public class search {
      private Webriver driver1 =  driver (WebDriver());
    private ChromeDriver driver = new ChromeDriver();
@@ -66,12 +34,6 @@ private WebElement disabledBtn;
           driver1.findElement(By.id(waitForusername())).getText();
 		  driver1.findElement(By.id(waitForpassword())).getText();
          driver1.findElement(By.id(waitForloginBtn())).click();
-        
-    assertTrue(loginPage.isInitialized());
-
-  
-
-    assertTrue(driver1.isInitialized());
 
         Thread.sleep(3000);
 
@@ -106,45 +68,43 @@ private WebElement disabledBtn;
     public String waitForloginBtn() {
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='submit']")));
 
-        return loginBtn.getText();
+        return loginBtn.click();
     }
     public String waitForleaveTab () {
  leaveTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leave']/parent::a")));
-        return leaveTab.getText();
+        return leaveTab.click();
     }
     public String waitForsearchBtn() {
         searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
-        return  searchBtn.getText();
+        return  searchBtn.click();
     }
     public String waitForadminTab () {
 adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leave']/parent::a")));
-        return  searchBtn.getText();
+        return  searchBtn.click();
     }
     public String waitForenabledBtn () {
         enabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Enabled']")));
-        return   enabledBtn .getText();
+        return   enabledBtn .click();
     }
     public String waitFordisabledBtn () {
         disabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Disabled']")));
-        return   disabledBtn .getText();
+        return   disabledBtn .click();
     }
 
 
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
-   
-        
-    assertTrue(loginPage.isInitialized());
+   driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 
-    loginPage.loginCleo("Admin", "admin123");
+          driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
-    assertTrue(LPPage.isInitialized());
+	    Thread.sleep(3000);
 
-        Thread.sleep(3000);
-
-
-     LPPPage.findElement(By.id(waitForadminTab ())).click();
+       driver1.findElement(By.id(waitForadminTab ())).click();
 
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
@@ -173,31 +133,19 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[t
        driver1.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-
-        Thread.sleep(3000);
-
        driver1.quit();
 }
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
-       login obj = new ExternalClass6(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
-LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
+ driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 
-    loginPage.loginCleo("Admin", "admin123");
+          driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
-    assertTrue(LPPage.isInitialized());
-
-
-        Thread.sleep(3000);
+ Thread.sleep(3000);
 
       //adminTab
        driver1.findElement(By.id(waitForadminTab ())).click();
@@ -215,23 +163,16 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
-       login obj = new ExternalClass6(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-    LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
-LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
+   driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 
-    loginPage.loginCleo("Admin", "admin123");
+          driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
-    assertTrue(LPPage.isInitialized());
         Thread.sleep(3000);
 
-       LPPPage.findElement(By.id(waitForadminTab ())).click();
+      driver1.findElement(By.id(waitForadminTab ())).click();
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
 
@@ -245,12 +186,12 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
 
-               LPPPage.findElement(By.id(waitForenabledBtn ())).click();
+               driver1.findElement(By.id(waitForenabledBtn ())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
 
-               LPPPage.findElement(By.id(waitFordisabledBtn ())).click();
+               driver1.findElement(By.id(waitFordisabledBtn ())).click();
 
                 break;
             default: // If none of the above cases match
@@ -260,13 +201,10 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
 
         input.close(); // Close the scanner
 
-       LPPPage .findElement(By.id(waitForsearchBtn())).click();
+       driver1.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        LPPPage .quit();
+        driver1.quit();
 
     }
-       public static class ExternalClass5 extends WebDriver {
-    }
-
 }
