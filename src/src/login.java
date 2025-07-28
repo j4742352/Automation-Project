@@ -13,23 +13,32 @@ import java.time.Duration;
 public class login  {
     private ChromeDriver driver = new ChromeDriver();
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private Webriver driver1 =  driver (WebDriver());
     private WebElement profileDropdown;
+        private WebElement username;
+        private WebElement password;
+        private WebElement loginBtn;
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
+	
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 
-
+          driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
   try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
+            driver1.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-LPPPage.quit();
+driver1.quit();
         
     }
 
@@ -59,11 +68,14 @@ LPPPage.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
 
-      
+                driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
+        
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            LPPPage.findElement(By.id(waitForprofileDropdown())).click();
+            driver1.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -71,7 +83,7 @@ LPPPage.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        LPPPage.quit();
+        driver1.quit();
 
 
     }
@@ -80,11 +92,14 @@ LPPPage.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
     {
-
+          driver1.findElement(By.id(waitForusername()).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
+        
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-           LPPPage.findElement(By.id(waitForprofileDropdown())).click();
+           driver1.findElement(By.id(waitForprofileDropdown())).click();
 
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
@@ -92,7 +107,7 @@ LPPPage.quit();
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-       LPPPage.quit();
+       driver1.quit();
     }
 
 
@@ -100,12 +115,14 @@ LPPPage.quit();
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
 
-
+          driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword()).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-        LPPPage.findElement(By.id(waitForprofileDropdown())).click();
+        driver1.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -113,19 +130,21 @@ LPPPage.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-       LPPPage.quit();
+      driver1.quit();
 
     }
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
     {
-   
+             driver1.findElement(By.id(waitForusername())).getText();
+		  driver1.findElement(By.id(waitForpassword())).getText();
+         driver1.findElement(By.id(waitForloginBtn())).click();
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-          LPPPage.findElement(By.id(waitForprofileDropdown())).click();
+          driver1.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -133,7 +152,7 @@ LPPPage.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-       LPPPage.quit();
+       driver1.quit();
 
 
     }
