@@ -71,7 +71,7 @@ private WebElement disabledBtn;
         return loginBtn.click();
     }
     public String waitForleaveTab () {
- leaveTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leave']/parent::a")));
+ leaveTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
         return leaveTab.click();
     }
     public String waitForsearchBtn() {
@@ -79,7 +79,7 @@ private WebElement disabledBtn;
         return  searchBtn.click();
     }
     public String waitForadminTab () {
-adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leave']/parent::a")));
+adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
         return  searchBtn.click();
     }
     public String waitForenabledBtn () {
