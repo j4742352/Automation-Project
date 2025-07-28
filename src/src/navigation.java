@@ -15,38 +15,6 @@ import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
-public class login  {
-    private ChromeDriver driver = new ChromeDriver();
-    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private Webriver driver1 =  driver (WebDriver());
-    private WebElement profileDropdown;
-        private WebElement username;
-        private WebElement password;
-        private WebElement loginBtn;
-    @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-	
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().window().maximize();
-
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
-
-  try {
-
-            System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
-
-            System.out.println("Waiting for 6 seconds on the dashboard...");
-            Thread.sleep(6000);
-        } catch (Exception e) {
-            System.out.println("Login Test Failed – Dashboard not detected");
-        }
-driver1.quit();
-        
-    }
-
 public class navigation {
     private WebDriver driver;
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
