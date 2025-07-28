@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.Scanner;
 
 public class search {
-     private Webriver driver1 =  driver (WebDriver());
+  //   private Webriver driver1 =  driver (WebDriver());
    private ChromeDriver driver = new ChromeDriver();
     private WebDriver driver;
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -31,14 +31,14 @@ private WebElement disabledBtn;
  		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
         Thread.sleep(3000);
 
 
-        driver1.findElement(By.id(waitForleaveTab ())).click();
+        driver.findElement(By.id(waitForleaveTab ())).click();
 
         usernameText.findElement(By.xpath("//textarea"));
 
@@ -46,10 +46,10 @@ private WebElement disabledBtn;
         Thread.sleep(3000);
 
 
-       driver1.findElement(By.id(waitForsearchBtn())).click();
+       driver.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-      driver1.quit();
+      driver.quit();
 
     }
 
@@ -98,13 +98,13 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
    driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
 	    Thread.sleep(3000);
 
-       driver1.findElement(By.id(waitForadminTab ())).click();
+       driver.findElement(By.id(waitForadminTab ())).click();
 
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
@@ -130,10 +130,10 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
         input.close(); // Close the scanner
 
-       driver1.findElement(By.id(waitForsearchBtn())).click();
+       driver.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-       driver1.quit();
+       driver.quit();
 }
 
     @Test
@@ -141,23 +141,23 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
  driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
  Thread.sleep(3000);
 
       //adminTab
-       driver1.findElement(By.id(waitForadminTab ())).click();
+       driver.findElement(By.id(waitForadminTab ())).click();
        EmployeeNameText.findElement(By.xpath("//textarea"));
         EmployeeNameText.sendKeys("Employee Name");
         Thread.sleep(3000);
 
         //searchBtn
-       driver1.findElement(By.id(waitForsearchBtn())).click();
+       driver.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-       driver1.quit();
+       driver.quit();
     }
 
 
@@ -166,13 +166,13 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
    driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
         Thread.sleep(3000);
 
-      driver1.findElement(By.id(waitForadminTab ())).click();
+      driver.findElement(By.id(waitForadminTab ())).click();
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
 
@@ -186,12 +186,12 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
 
-               driver1.findElement(By.id(waitForenabledBtn ())).click();
+               driver.findElement(By.id(waitForenabledBtn ())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
 
-               driver1.findElement(By.id(waitFordisabledBtn ())).click();
+               driver.findElement(By.id(waitFordisabledBtn ())).click();
 
                 break;
             default: // If none of the above cases match
@@ -201,10 +201,10 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
         input.close(); // Close the scanner
 
-       driver1.findElement(By.id(waitForsearchBtn())).click();
+       driver.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.quit();
+        driver.quit();
 
     }
 }
