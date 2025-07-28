@@ -13,11 +13,10 @@ import java.time.Duration;
 public class login  {
     private ChromeDriver driver = new ChromeDriver();
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    private Webriver driver1 =  driver (WebDriver());
+  //  private Webriver driver1 =  driver (WebDriver());
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
 		  private WebElement Admintab;
-		  private WebElement Maintenancetab;
 	  private WebElement Directorytab;
         private WebElement username;
         private WebElement password;
@@ -28,21 +27,21 @@ public class login  {
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+         driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+        driver.findElement(By.id(waitForloginBtn())).click();
 
   try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            driver.findElement(By.id(waitForprofileDropdown())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-driver1.quit();
+driver.quit();
         
     }
 
@@ -92,14 +91,14 @@ driver1.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
 
-                driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+                driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
         
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForPIMtab())).click();
+            driver.findElement(By.id(waitForPIMtab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -107,7 +106,7 @@ driver1.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-        driver1.quit();
+        driver.quit();
 
 
     }
@@ -116,14 +115,14 @@ driver1.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
     {
-          driver1.findElement(By.id(waitForusername()).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername()).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
         
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-           driver1.findElement(By.id(waitForAdmintab())).click();
+           driver.findElement(By.id(waitForAdmintab())).click();
 
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
@@ -131,7 +130,7 @@ driver1.quit();
         } catch (Exception e) {
             System.out.println("Login Test Failed – Dashboard not detected");
         }
-       driver1.quit();
+       driver.quit();
     }
 
 
@@ -139,14 +138,14 @@ driver1.quit();
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword()).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword()).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-        driver1.findElement(By.id(waitForMaintancetab())).click();
+        driver.findElement(By.id(waitForMaintancetab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -154,21 +153,21 @@ driver1.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-      driver1.quit();
+      driver.quit();
 
     }
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
     {
-             driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+             driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-          driver1.findElement(By.id(waitForDirectorytab())).click();
+          driver.findElement(By.id(waitForDirectorytab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -176,7 +175,7 @@ driver1.quit();
             System.out.println("Login Test Failed – Dashboard not detected");
         }
 
-       driver1.quit();
+       driver.quit();
 
 
     }
