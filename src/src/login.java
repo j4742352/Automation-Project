@@ -59,7 +59,7 @@ driver1.quit();
         return password.getText();
     }
     public String waitForloginBtn() {
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='submit']")));
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
 
         return loginBtn.click();
     }
@@ -69,22 +69,22 @@ driver1.quit();
         return  profileDropdown.click();
     }
  public String waitForPIMtab() {
-        PIMtab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("PIM")));
+        PIMtab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='PIM']")));
 
         return  PIMtab.click();
     }
 	 public String waitForAdmintab() {
-        Admintab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Admin")));
+        Admintab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='Admin']")));
 
         return  Admintab.click();
     }
 	 public String waitForMaintenanceTab() {
-       Maintancetab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Maintenance")));
+       Maintenancetab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='Maintenance']")));
 
         return  Maintancetab.click();
     }
 	 public String waitForDirectorytab() {
-      Directorytab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Directory")));
+      Directorytab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='Directory']")));
 
         return  Directorytab.click();
     }
