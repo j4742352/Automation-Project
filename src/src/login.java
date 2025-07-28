@@ -15,6 +15,10 @@ public class login  {
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     private Webriver driver1 =  driver (WebDriver());
     private WebElement profileDropdown;
+	  private WebElement PIMtab;
+		  private WebElement Admintab;
+		  private WebElement Maintenancetab;
+	  private WebElement Directorytab;
         private WebElement username;
         private WebElement password;
         private WebElement loginBtn;
@@ -60,11 +64,30 @@ driver1.quit();
         return loginBtn.click();
     }
     public String waitForprofileDropdown() {
-        profileDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-userdropdown-name")));
+        profileDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("oxd-userdropdown-name")));
 
         return  profileDropdown.click();
     }
+ public String waitForPIMtab() {
+        PIMtab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
 
+        return  PIMtab.click();
+    }
+	 public String waitForAdmintab() {
+        Admintab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+
+        return  Admintab.click();
+    }
+	 public String waitForMaintancetab() {
+       Maintancetab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+
+        return  Maintancetab.click();
+    }
+	 public String waitForDirectorytab() {
+      Directorytab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+
+        return  Directorytab.click();
+    }
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
 
@@ -75,7 +98,7 @@ driver1.quit();
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-            driver1.findElement(By.id(waitForprofileDropdown())).click();
+            driver1.findElement(By.id(waitForPIMtab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -99,7 +122,7 @@ driver1.quit();
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-           driver1.findElement(By.id(waitForprofileDropdown())).click();
+           driver1.findElement(By.id(waitForAdmintab())).click();
 
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
@@ -122,7 +145,7 @@ driver1.quit();
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-        driver1.findElement(By.id(waitForprofileDropdown())).click();
+        driver1.findElement(By.id(waitForMaintancetab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
@@ -144,7 +167,7 @@ driver1.quit();
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
-          driver1.findElement(By.id(waitForprofileDropdown())).click();
+          driver1.findElement(By.id(waitForDirectorytab())).click();
 
             System.out.println("Waiting for 6 seconds on the dashboard...");
             Thread.sleep(6000);
