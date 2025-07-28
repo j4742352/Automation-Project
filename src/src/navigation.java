@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class navigation {
     private WebDriver driver;
-    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private WebDriverWait wait ;
     private WebElement Btn;
     private WebElement timeTab;
     private WebElement attendanceBtn;
@@ -34,7 +34,10 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
@@ -178,9 +181,12 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
-driver.get("https://opensource-demo.orangehrmlive.com/");
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
-
+	    
           driver.findElement(By.id(waitForusername())).getText();
 		  driver.findElement(By.id(waitForpassword())).getText();
          driver.findElement(By.id(waitForloginBtn())).click();
@@ -244,7 +250,10 @@ driver.get("https://opensource-demo.orangehrmlive.com/");
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
-driver.get("https://opensource-demo.orangehrmlive.com/");
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
