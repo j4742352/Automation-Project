@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class login  {
+	private WebDriver driver;
     private ChromeDriver driver = new ChromeDriver();
-    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-  //  private Webriver driver1 =  driver (WebDriver());
+    private WebDriverWait wait;
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
 		  private WebElement Admintab;
@@ -23,7 +23,9 @@ public class login  {
         private WebElement loginBtn;
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-	
+	                System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
@@ -90,7 +92,12 @@ driver.quit();
 	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
-
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
+	    
                 driver.findElement(By.id(waitForusername())).getText();
 		  driver.findElement(By.id(waitForpassword())).getText();
          driver.findElement(By.id(waitForloginBtn())).click();
@@ -114,7 +121,13 @@ driver.quit();
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
-    {
+    { 
+	    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
+     
           driver.findElement(By.id(waitForusername()).getText();
 		  driver.findElement(By.id(waitForpassword())).getText();
          driver.findElement(By.id(waitForloginBtn())).click();
@@ -137,6 +150,11 @@ driver.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
+	     System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
 		  driver.findElement(By.id(waitForpassword()).getText();
@@ -159,7 +177,13 @@ driver.quit();
 
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
-    {
+    {  
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
+	    
              driver.findElement(By.id(waitForusername())).getText();
 		  driver.findElement(By.id(waitForpassword())).getText();
          driver.findElement(By.id(waitForloginBtn())).click();
