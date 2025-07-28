@@ -66,7 +66,7 @@ private WebElement disabledBtn;
         return password.getText();
     }
     public String waitForloginBtn() {
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='submit']")));
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
 
         return loginBtn.click();
     }
