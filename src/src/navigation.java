@@ -37,14 +37,14 @@ private WebElement generalinformationBtn;
  driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
 
-        driver1.findElement(By.id(waitFortimeTab() )).click();
+        driver.findElement(By.id(waitFortimeTab() )).click();
 
 
-         driver1.findElement(By.id(waitForattendanceBtn())).click();
+         driver.findElement(By.id(waitForattendanceBtn())).click();
 
   Thread.sleep(3000);
 
@@ -63,22 +63,22 @@ private WebElement generalinformationBtn;
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println(" My Records");
-                driver1.findElement(By.id(waitForBtn() )).click();
+                driver.findElement(By.id(waitForBtn() )).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println(" Punch In/Out");
-                driver1.findElement(By.id(waitForBtn() )).click();
+                driver.findElement(By.id(waitForBtn() )).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Employee Records");
-                 driver1.findElement(By.id(waitForBtn() )).click();
+                 driver.findElement(By.id(waitForBtn() )).click();
 
                 break; // Exit the switch statement
             case 4: // If choice is 2
                 System.out.println("Configuration");
-                 driver1.findElement(By.id(waitForBtn() )).click();
+                 driver.findElement(By.id(waitForBtn() )).click();
 
                 break;
             default: // If none of the above cases match
@@ -88,19 +88,19 @@ private WebElement generalinformationBtn;
 
         input.close(); // Close the scanner
 
-        driver1.findElement(By.id(waitForsearchBtn() )).click();
+        driver.findElement(By.id(waitForsearchBtn() )).click();
 
         Thread.sleep(3000);
 
-         driver1.findElement(By.id(waitForadminTab() )).click();
+         driver.findElement(By.id(waitForadminTab() )).click();
 
-       driver1.findElement(By.id(waitForqualificationsBtn ())).click();
+       driver.findElement(By.id(waitForqualificationsBtn ())).click();
 
-         driver1.findElement(By.id(waitForskillsBtn ())).click();
+         driver.findElement(By.id(waitForskillsBtn ())).click();
 
-       driver1.findElement(By.id( waitForaddBtn() )).click();
+       driver.findElement(By.id( waitForaddBtn() )).click();
 
-        driver1.quit();
+        driver.quit();
 }
     public String waitForusername() {
 
@@ -181,10 +181,10 @@ private WebElement generalinformationBtn;
 driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
-         driver1.findElement(By.id(waitForadminTab())).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
+         driver.findElement(By.id(waitForadminTab())).click();
 
         Thread.sleep(3000);
 
@@ -201,17 +201,17 @@ driver.get("https://opensource-demo.orangehrmlive.com/");
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Project Reports ");
-               driver1.findElement(By.id(waitForBtn())).click();
+               driver.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Employee Reports ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                driver.findElement(By.id(waitForBtn())).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Attendance Summary ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                driver.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             default: // If none of the above cases match
@@ -223,21 +223,21 @@ driver.get("https://opensource-demo.orangehrmlive.com/");
 
 
 
-      driver1.findElement(By.id(waitForsearchBtn())).click();
+      driver.findElement(By.id(waitForsearchBtn())).click();
 
         Thread.sleep(3000);
 
 
-       driver1.findElement(By.id(waitForjobBtn () )).click();
+       driver.findElement(By.id(waitForjobBtn () )).click();
 
 
-       driver1.findElement(By.id(waitForjobtitlesBtn ())).click();
+       driver.findElement(By.id(waitForjobtitlesBtn ())).click();
 
 
-     driver1.findElement(By.id(waitForaddBtn())).click();
+     driver.findElement(By.id(waitForaddBtn())).click();
 
 
-       driver1.quit();
+       driver.quit();
 
 }
 
@@ -247,12 +247,12 @@ driver.get("https://opensource-demo.orangehrmlive.com/");
 driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver1.findElement(By.id(waitForusername())).getText();
-		  driver1.findElement(By.id(waitForpassword())).getText();
-         driver1.findElement(By.id(waitForloginBtn())).click();
-         driver1.findElement(By.id(waitForadminTab())).click();
-     driver1.findElement(By.id(waitFortimeTab() )).click();
-driver1.findElement(By.id( waitForprojectInfoBtn() )).click();
+          driver.findElement(By.id(waitForusername())).getText();
+		  driver.findElement(By.id(waitForpassword())).getText();
+         driver.findElement(By.id(waitForloginBtn())).click();
+         driver.findElement(By.id(waitForadminTab())).click();
+     driver.findElement(By.id(waitFortimeTab() )).click();
+driver.findElement(By.id( waitForprojectInfoBtn() )).click();
 
         Thread.sleep(3000);
 
@@ -268,12 +268,12 @@ driver1.findElement(By.id( waitForprojectInfoBtn() )).click();
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Customers ");
-              driver1.findElement(By.id(waitForBtn())).click();
+              driver.findElement(By.id(waitForBtn())).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Projects ");
-                driver1.findElement(By.id(waitForBtn())).click();
+                driver.findElement(By.id(waitForBtn())).click();
 
                 break;
             default: // If none of the above cases match
@@ -283,20 +283,20 @@ driver1.findElement(By.id( waitForprojectInfoBtn() )).click();
 
         input.close(); // Close the scanner
 
- driver1.findElement(By.id(waitForsearchBtn())).click();
+ driver.findElement(By.id(waitForsearchBtn())).click();
         Thread.sleep(3000);
 
-        driver1.findElement(By.id(waitForadminTab())).click();
+        driver.findElement(By.id(waitForadminTab())).click();
 
-        driver1.findElement(By.id(waitFororganizationBtn ())).click();
+        driver.findElement(By.id(waitFororganizationBtn ())).click();
  Thread.sleep(3000);
         
-driver1.findElement(By.id(waitForgeneralinformationBtn())).click();
+driver.findElement(By.id(waitForgeneralinformationBtn())).click();
 
-        driver1.findElement(By.id(waitForaddBtn())).click();
+        driver.findElement(By.id(waitForaddBtn())).click();
 
 
-       driver1.quit();
+       driver.quit();
 
 
 
