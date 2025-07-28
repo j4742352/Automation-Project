@@ -12,8 +12,8 @@ import java.time.Duration;
 
 public class login  {
 	private WebDriver driver;
-    private ChromeDriver driver = new ChromeDriver();
-    private WebDriverWait wait;
+    private WebDriverWait wait ;
+    private WebElement  Maintenancetab;
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
 		  private WebElement Admintab;
@@ -63,32 +63,32 @@ driver.quit();
     public String waitForloginBtn() {
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
 
-        return loginBtn.click();
+        return loginBtn;
     }
-    public String waitForprofileDropdown() {
+    public WebElement waitForprofileDropdown() {
         profileDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("oxd-userdropdown-name")));
 
-        return  profileDropdown.click();
+        return  profileDropdown;
     }
  public String waitForPIMtab() {
         PIMtab= wait.until(ExpectedConditions.elementToBeClickable (By.cssSelector("button[type='PIM']")));
 
-        return  PIMtab.click();
+        return  PIMtab;
     }
-	 public String waitForAdmintab() {
+	 public WebElement waitForAdmintab() {
         Admintab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Admin']")));
 
-        return  Admintab.click();
+        return  Admintab;
     }
-	 public String waitForMaintenanceTab() {
+	 public WebElement waitForMaintenanceTab() {
        Maintenancetab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Maintenance']")));
 
-        return  Maintancetab.click();
+        return  Maintenancetab;
     }
-	 public String waitForDirectorytab() {
+	 public WebElement waitForDirectorytab() {
       Directorytab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Directory']")));
 
-        return  Directorytab.click();
+        return  Directorytab;
     }
 	
     @Test
@@ -118,91 +118,3 @@ driver.quit();
 
 
     }
-
-
-    @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
-    { 
-	    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
-	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().window().maximize();
-     
-          driver.findElement(By.id(waitForusername()).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
-        
-        try {
-
-            System.out.println("Login Test Passed – Dashboard Loaded");
-           driver.findElement(By.id(waitForAdmintab())).click();
-
-
-            System.out.println("Waiting for 6 seconds on the dashboard...");
-            Thread.sleep(6000);
-        } catch (Exception e) {
-            System.out.println("Login Test Failed – Dashboard not detected");
-        }
-       driver.quit();
-    }
-
-
-    @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
-    {
-	     System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
-	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().window().maximize();
-
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword()).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
-
-        try {
-
-            System.out.println("Login Test Passed – Dashboard Loaded");
-        driver.findElement(By.id(waitForMaintancetab())).click();
-
-            System.out.println("Waiting for 6 seconds on the dashboard...");
-            Thread.sleep(6000);
-        } catch (Exception e) {
-            System.out.println("Login Test Failed – Dashboard not detected");
-        }
-
-      driver.quit();
-
-    }
-
-    @Test
-    public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
-    {  
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
-	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().window().maximize();
-	    
-             driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
-
-        try {
-
-            System.out.println("Login Test Passed – Dashboard Loaded");
-          driver.findElement(By.id(waitForDirectorytab())).click();
-
-            System.out.println("Waiting for 6 seconds on the dashboard...");
-            Thread.sleep(6000);
-        } catch (Exception e) {
-            System.out.println("Login Test Failed – Dashboard not detected");
-        }
-
-       driver.quit();
-
-
-    }
-	     
-}
