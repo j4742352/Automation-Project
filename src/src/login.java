@@ -69,25 +69,26 @@ driver1.quit();
         return  profileDropdown.click();
     }
  public String waitForPIMtab() {
-        PIMtab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+        PIMtab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("PIM")));
 
         return  PIMtab.click();
     }
 	 public String waitForAdmintab() {
-        Admintab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+        Admintab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Admin")));
 
         return  Admintab.click();
     }
-	 public String waitForMaintancetab() {
-       Maintancetab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+	 public String waitForMaintenanceTab() {
+       Maintancetab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Maintenance")));
 
         return  Maintancetab.click();
     }
 	 public String waitForDirectorytab() {
-      Directorytab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='enter']")));
+      Directorytab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("Directory")));
 
         return  Directorytab.click();
     }
+	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
 
