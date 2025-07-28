@@ -337,5 +337,8 @@ String az="";
 
     }
        public static class ExternalClass5 extends WebDriver {
+
+            login obj = new ExternalClass5(); // calling external class of login
+obj.startBrowser(String browserName, String url);
     }
 }
