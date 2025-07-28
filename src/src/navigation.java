@@ -115,12 +115,12 @@ private WebElement generalinformationBtn;
         return password.getText();
     }
     public String waitForloginBtn() {
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='submit']")));
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
 
         return loginBtn.click();
     }
     public String waitFortimeTab() {
-        timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[button()='Time']/parent::a")));
+        timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
         return    timeTab.click();
     }
     public String waitForattendanceBtn() {
@@ -133,24 +133,24 @@ private WebElement generalinformationBtn;
         return   Btn.click();
     }
     public String waitForsearchBtn() {
-        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[()='Search']")));
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//a[()='Search']")));
         return  searchBtn.click();
     }
     public String waitForadminTab() {
-        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[button()='Admin']/parent::a")));
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
         return   adminTab.click();
     }
     public String waitForqualificationsBtn () {
-        qualificationsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[button()='Qualifications']/parent::a")));
+        qualificationsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Qualifications']/parent::a")));
 
         return   qualificationsBtn.click();
     }
     public String waitForskillsBtn () {
-        skillsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[button()='Skills']/parent::a")));
+        skillsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Skills']/parent::a")));
         return skillsBtn.click();
     }
     public String waitForaddBtn() {
-        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[button()='Add']/parent::a")));
+        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
 
         return   addBtn.click();
     }
@@ -159,7 +159,7 @@ private WebElement generalinformationBtn;
         return  jobBtn.click();
     }
     public String waitForprojectInfoBtn() {
-        projectInfoBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Project Info']/parent::a")));
+        projectInfoBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Project Info']/parent::a")));
         return     projectInfoBtn.click();
     }
 
