@@ -14,10 +14,10 @@ import java.time.Duration;
 import java.util.Scanner;
 
 public class search {
-  //   private Webriver driver1 =  driver (WebDriver());
+    private Webriver driver;
    private ChromeDriver driver = new ChromeDriver();
     private WebDriver driver;
-    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private WebDriverWait wait ;
     private WebElement profileDropdown;
     private WebElement searchBtn;
     private   WebElement leaveTab;
@@ -28,7 +28,10 @@ private  WebElement enabledBtn;
 private WebElement disabledBtn;
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
- 		driver.get("https://opensource-demo.orangehrmlive.com/");
+ 	 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
@@ -95,7 +98,10 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
-   driver.get("https://opensource-demo.orangehrmlive.com/");
+   System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
@@ -138,7 +144,10 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
- driver.get("https://opensource-demo.orangehrmlive.com/");
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
@@ -163,7 +172,10 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
-   driver.get("https://opensource-demo.orangehrmlive.com/");
+  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+	   driver = new ChromeDriver();
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
           driver.findElement(By.id(waitForusername())).getText();
