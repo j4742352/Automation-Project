@@ -17,20 +17,7 @@ public class login  {
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
 
-login obj = new ExternalClass4(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-    LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
- LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
 
-    loginPage.loginCleo("Admin", "admin123");
-
-    assertTrue(LPPage.isInitialized());
 
   try {
 
@@ -72,21 +59,7 @@ LPPPage.quit();
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
 
-        login obj = new ExternalClass4(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-    LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
- LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
-
-    loginPage.loginCleo("Admin", "admin123");
-
-    assertTrue(LPPage.isInitialized());
-
+      
         try {
 
             System.out.println("Login Test Passed – Dashboard Loaded");
@@ -107,20 +80,6 @@ String az="";
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2()
     {
- login obj = new ExternalClass4(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
- LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
-
-    loginPage.loginCleo("Admin", "admin123");
-
-    assertTrue(LPPage.isInitialized());
 
         try {
 
@@ -141,20 +100,7 @@ LoginPage loginPage=new LoginPage(Connection.driver);
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction3()
     {
 
-login obj = new ExternalClass4(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-    LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
-LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
 
-    loginPage.loginCleo("Admin", "admin123");
-
-    assertTrue(LPPage.isInitialized());
 
         try {
 
@@ -174,21 +120,7 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction4()
     {
-       login obj = new ExternalClass4(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-String az="";
-        String fn = obj.az;
-  Connection.driver = fn.get(Connection.startBrowser("Chrome","webdriver.chrome.driver","C:\\chromedriver.exe"));
-    LoginPage loginPage=new LoginPage(Connection.driver);
-    LPPage LPPPage = new LPPage(Connection.driver);
-LPPPage.get("https://opensource-demo.orangehrmlive.com/");
-        
-    assertTrue(loginPage.isInitialized());
-
-    loginPage.loginCleo("Admin", "admin123");
-
-    assertTrue(LPPage.isInitialized());
-
+   
 
         try {
 
@@ -204,7 +136,5 @@ LPPPage.get("https://opensource-demo.orangehrmlive.com/");
        LPPPage.quit();
 
 
-    }
-        public static class ExternalClass4 extends WebDriver {
     }
 }
