@@ -57,12 +57,12 @@ driver1.quit();
     public String waitForloginBtn() {
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='submit']")));
 
-        return loginBtn.getText();
+        return loginBtn.click();
     }
     public String waitForprofileDropdown() {
         profileDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-userdropdown-name")));
 
-        return  profileDropdown.getText();
+        return  profileDropdown.click();
     }
 
     @Test
@@ -156,9 +156,5 @@ driver1.quit();
 
 
     }
-	      public static class ExternalClass5 extends WebDriver {
-
-            login obj = new ExternalClass5(); // calling external class of login
-obj.startBrowser(String browserName, String url);
-    }
+	     
 }
