@@ -1,8 +1,6 @@
 package src;
 
 import org.openqa.selenium.WebDriver;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,104 +11,78 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Scanner;
 
+import static jdk.internal.agent.Agent.getText;
+
 public class search {
-    private Webriver driver;
-   private ChromeDriver driver = new ChromeDriver();
+
     private WebDriver driver;
-    private WebDriverWait wait ;
+    private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));;
     private WebElement profileDropdown;
     private WebElement searchBtn;
+    private WebElement username;
+    private WebElement password;
     private   WebElement leaveTab;
 private WebElement usernameText;
 private WebElement   EmployeeNameText;
 private   WebElement adminTab;
 private  WebElement enabledBtn;
 private WebElement disabledBtn;
+    private WebElement loginBtn;
+    private Object username1;
+
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
  	 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
-	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+          driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+		  driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
         Thread.sleep(3000);
 
 
-        driver.findElement(By.id(waitForleaveTab ())).click();
+        leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(leaveTab))).click();
 
         usernameText.findElement(By.xpath("//textarea"));
 
         usernameText.sendKeys((CharSequence) username1);
         Thread.sleep(3000);
 
-
-       driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
+       driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
       driver.quit();
 
     }
 
-    public String waitForusername() {
-
-
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-
-        return username.getText();
-    }
-    public String waitForpassword() {
-        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
-
-        return password.getText();
-    }
-    public String waitForloginBtn() {
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
-
-        return loginBtn.click();
-    }
-    public String waitForleaveTab () {
- leaveTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
-        return leaveTab.click();
-    }
-    public String waitForsearchBtn() {
-        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
-        return  searchBtn.click();
-    }
-    public String waitForadminTab () {
-adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
-        return  searchBtn.click();
-    }
-    public String waitForenabledBtn () {
-        enabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Enabled']")));
-        return   enabledBtn .click();
-    }
-    public String waitFordisabledBtn () {
-        disabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Disabled']")));
-        return   disabledBtn .click();
-    }
-
-
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
 	    Thread.sleep(3000);
-
-       driver.findElement(By.id(waitForadminTab ())).click();
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
+       driver.findElement(By.id(String.valueOf(adminTab))).click();
 
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
@@ -136,7 +108,8 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
         input.close(); // Close the scanner
 
-       driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
        driver.quit();
@@ -146,24 +119,30 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
  Thread.sleep(3000);
 
       //adminTab
-       driver.findElement(By.id(waitForadminTab ())).click();
-       EmployeeNameText.findElement(By.xpath("//textarea"));
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
+        driver.findElement(By.id(String.valueOf(adminTab))).click();
+
+        EmployeeNameText.findElement(By.xpath("//textarea"));
         EmployeeNameText.sendKeys("Employee Name");
         Thread.sleep(3000);
 
         //searchBtn
-       driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
        driver.quit();
@@ -174,17 +153,22 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
   System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
         Thread.sleep(3000);
 
-      driver.findElement(By.id(waitForadminTab ())).click();
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
+        driver.findElement(By.id(String.valueOf(adminTab))).click();
+
 
         Scanner input = new Scanner(System.in); // Create a Scanner object
 
@@ -197,13 +181,13 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
-
-               driver.findElement(By.id(waitForenabledBtn ())).click();
+                enabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Enabled']")));
+               driver.findElement(By.id(String.valueOf(enabledBtn))).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
-
-               driver.findElement(By.id(waitFordisabledBtn ())).click();
+                disabledBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Disabled']")));
+               driver.findElement(By.id(String.valueOf(disabledBtn))).click();
 
                 break;
             default: // If none of the above cases match
@@ -213,7 +197,8 @@ adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//
 
         input.close(); // Close the scanner
 
-       driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
         driver.quit();
