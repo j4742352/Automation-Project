@@ -32,7 +32,7 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
- 	 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ 	 
 	    driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -67,7 +67,7 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction1() throws InterruptedException {
-   System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+   
 	   driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -117,7 +117,7 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction2() throws InterruptedException {
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+
 	   driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -151,7 +151,7 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void  SearchFunction3() throws InterruptedException {
-  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+  
 	   driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
