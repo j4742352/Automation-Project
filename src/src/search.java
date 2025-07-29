@@ -32,23 +32,23 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
- 	  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ 	  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");// here se.
 	    driver = new ChromeDriver();
-		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.get("https://opensource-demo.orangehrmlive.com/");// no access to c1 , c2, c3, c4
 		driver.manage().window().maximize();
 
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));// c1
           driver.findElement(By.id(String.valueOf(username))).getText();
-        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
 		  driver.findElement(By.id(String.valueOf(password))).getText();
 
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c3
          driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
         Thread.sleep(3000);
 
 
-        leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c4
         driver.findElement(By.id(String.valueOf(leaveTab))).click();
 
         usernameText.findElement(By.xpath("//textarea"));
