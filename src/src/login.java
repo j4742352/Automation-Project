@@ -22,7 +22,7 @@ public class login  {
 	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-	                
+	                 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -54,7 +54,7 @@ driver.quit();
 	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
-
+ System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -87,7 +87,7 @@ driver.quit();
     }
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2(){
-        
+         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.get("https://opensource-demo.orangehrmlive.com/");
