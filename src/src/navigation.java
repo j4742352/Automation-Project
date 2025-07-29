@@ -16,8 +16,11 @@ import java.util.Scanner;
 import static org.junit.Assert.*;
 
 public class navigation {
+    private WebElement username;
+    private WebElement password;
+    private WebElement loginBtn;
     private WebDriver driver;
-    private WebDriverWait wait ;
+    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     private WebElement Btn;
     private WebElement timeTab;
     private WebElement attendanceBtn;
@@ -36,18 +39,21 @@ private WebElement generalinformationBtn;
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
-        driver.findElement(By.id(waitFortimeTab() )).click();
+        timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
+        driver.findElement(By.id(String.valueOf(timeTab))).click();
 
-
-         driver.findElement(By.id(waitForattendanceBtn())).click();
+        attendanceBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Attendance']")));
+         driver.findElement(By.id(String.valueOf(attendanceBtn))).click();
 
   Thread.sleep(3000);
 
@@ -66,22 +72,26 @@ private WebElement generalinformationBtn;
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println(" My Records");
-                driver.findElement(By.id(waitForBtn() )).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println(" Punch In/Out");
-                driver.findElement(By.id(waitForBtn() )).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Employee Records");
-                 driver.findElement(By.id(waitForBtn() )).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                 driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break; // Exit the switch statement
             case 4: // If choice is 2
                 System.out.println("Configuration");
-                 driver.findElement(By.id(waitForBtn() )).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                 driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break;
             default: // If none of the above cases match
@@ -90,107 +100,47 @@ private WebElement generalinformationBtn;
         }
 
         input.close(); // Close the scanner
-
-        driver.findElement(By.id(waitForsearchBtn() )).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//a[()='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
 
         Thread.sleep(3000);
 
-         driver.findElement(By.id(waitForadminTab() )).click();
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
+         driver.findElement(By.id(String.valueOf(adminTab))).click();
 
-       driver.findElement(By.id(waitForqualificationsBtn ())).click();
+        qualificationsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Qualifications']/parent::a")));
+       driver.findElement(By.id(String.valueOf(qualificationsBtn))).click();
 
-         driver.findElement(By.id(waitForskillsBtn ())).click();
+        skillsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Skills']/parent::a")));
+         driver.findElement(By.id(String.valueOf(skillsBtn))).click();
 
-       driver.findElement(By.id( waitForaddBtn() )).click();
+        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
+       driver.findElement(By.id(String.valueOf(addBtn))).click();
 
         driver.quit();
 }
-    public String waitForusername() {
 
 
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));//exception
-
-        return username.getText();
-    }
-    public String waitForpassword() {
-        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
-
-        return password.getText();
-    }
-    public String waitForloginBtn() {
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
-
-        return loginBtn.click();
-    }
-    public String waitFortimeTab() {
-        timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
-        return    timeTab.click();
-    }
-    public String waitForattendanceBtn() {
-        attendanceBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Attendance']")));
-        return   attendanceBtn.click();
-    }
-    public String waitForBtn() {
-        Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
-
-        return   Btn.click();
-    }
-    public String waitForsearchBtn() {
-        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//a[()='Search']")));
-        return  searchBtn.click();
-    }
-    public String waitForadminTab() {
-        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
-        return   adminTab.click();
-    }
-    public String waitForqualificationsBtn () {
-        qualificationsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Qualifications']/parent::a")));
-
-        return   qualificationsBtn.click();
-    }
-    public String waitForskillsBtn () {
-        skillsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Skills']/parent::a")));
-        return skillsBtn.click();
-    }
-    public String waitForaddBtn() {
-        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
-
-        return   addBtn.click();
-    }
-    public String waitForjobBtn () {
-        jobBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job")));
-        return  jobBtn.click();
-    }
-    public String waitForprojectInfoBtn() {
-        projectInfoBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Project Info']/parent::a")));
-        return     projectInfoBtn.click();
-    }
-
-    public String waitFororganizationBtn () {
-        organizationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Organization")));
-        return   organizationBtn .click();
-    }
-    public String waitForgeneralinformationBtn() {
-        generalinformationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("General Information")));
-        return    generalinformationBtn.click();
-    }
-    public String waitForjobtitlesBtn () {
-        jobtitlesBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job Title")));
-        return     jobtitlesBtn.click();
-    }
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
-	    
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
-         driver.findElement(By.id(waitForadminTab())).click();
+
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
+
+
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
+        driver.findElement(By.id(String.valueOf(adminTab))).click();
+
 
         Thread.sleep(3000);
 
@@ -207,17 +157,20 @@ private WebElement generalinformationBtn;
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Project Reports ");
-               driver.findElement(By.id(waitForBtn())).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+               driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Employee Reports ");
-                driver.findElement(By.id(waitForBtn())).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break;
             case 3: // If choice is 1
                 System.out.println("Attendance Summary ");
-                driver.findElement(By.id(waitForBtn())).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break; // Exit the switch statement
             default: // If none of the above cases match
@@ -229,18 +182,20 @@ private WebElement generalinformationBtn;
 
 
 
-      driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//a[()='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
 
         Thread.sleep(3000);
 
+        jobBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job")));
+       driver.findElement(By.id(String.valueOf(jobBtn))).click();
 
-       driver.findElement(By.id(waitForjobBtn () )).click();
+        jobtitlesBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job Title")));
+       driver.findElement(By.id(String.valueOf(jobtitlesBtn))).click();
 
 
-       driver.findElement(By.id(waitForjobtitlesBtn ())).click();
-
-
-     driver.findElement(By.id(waitForaddBtn())).click();
+        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
+        driver.findElement(By.id(String.valueOf(addBtn))).click();
 
 
        driver.quit();
@@ -252,16 +207,28 @@ private WebElement generalinformationBtn;
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
  System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 	   driver = new ChromeDriver();
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-          driver.findElement(By.id(waitForusername())).getText();
-		  driver.findElement(By.id(waitForpassword())).getText();
-         driver.findElement(By.id(waitForloginBtn())).click();
-         driver.findElement(By.id(waitForadminTab())).click();
-     driver.findElement(By.id(waitFortimeTab() )).click();
-driver.findElement(By.id( waitForprojectInfoBtn() )).click();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
+
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
+        driver.findElement(By.id(String.valueOf(loginBtn))).click();
+
+
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
+        driver.findElement(By.id(String.valueOf(adminTab))).click();
+
+
+        timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
+        driver.findElement(By.id(String.valueOf(timeTab))).click();
+
+        projectInfoBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Project Info']/parent::a")));
+driver.findElement(By.id(String.valueOf(projectInfoBtn))).click();
 
         Thread.sleep(3000);
 
@@ -277,12 +244,14 @@ driver.findElement(By.id( waitForprojectInfoBtn() )).click();
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
                 System.out.println("Customers ");
-              driver.findElement(By.id(waitForBtn())).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+              driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 System.out.println("Projects ");
-                driver.findElement(By.id(waitForBtn())).click();
+                Btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button")));
+                driver.findElement(By.id(String.valueOf(Btn))).click();
 
                 break;
             default: // If none of the above cases match
@@ -292,18 +261,23 @@ driver.findElement(By.id( waitForprojectInfoBtn() )).click();
 
         input.close(); // Close the scanner
 
- driver.findElement(By.id(waitForsearchBtn())).click();
+        searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//a[()='Search']")));
+        driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
-        driver.findElement(By.id(waitForadminTab())).click();
+        adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
+        driver.findElement(By.id(String.valueOf(adminTab))).click();
 
-        driver.findElement(By.id(waitFororganizationBtn ())).click();
+        organizationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Organization")));
+        driver.findElement(By.id(String.valueOf(organizationBtn))).click();
  Thread.sleep(3000);
-        
-driver.findElement(By.id(waitForgeneralinformationBtn())).click();
 
-        driver.findElement(By.id(waitForaddBtn())).click();
 
+        generalinformationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("General Information")));
+driver.findElement(By.id(String.valueOf(generalinformationBtn))).click();
+
+        addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
+        driver.findElement(By.id(String.valueOf(addBtn))).click();
 
        driver.quit();
 
