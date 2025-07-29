@@ -23,8 +23,6 @@ public class MainTest
                 obj.LoginFunction();
                 obj.LoginFunction1();
                 obj.LoginFunction2();
-                obj.LoginFunction3();
-                obj.LoginFunction4();
                 break; // Exit the switch statement
             case 2: // If choice is 2
                 search obj1 = new ExternalClass1();// calling external class of search
