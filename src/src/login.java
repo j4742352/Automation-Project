@@ -32,10 +32,7 @@ public class login  {
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
         driver.findElement(By.id(String.valueOf(password))).getText();
 
-	  
-
-
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c3
+	    loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c3
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
 
