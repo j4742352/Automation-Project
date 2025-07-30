@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class login  {
 	private WebDriver driver;
-    private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));;
+    private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
         private WebElement username;
