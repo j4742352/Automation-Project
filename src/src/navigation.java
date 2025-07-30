@@ -37,7 +37,7 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
 	   driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -124,7 +124,7 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction1() throws InterruptedException {
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
 	   driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -205,7 +205,7 @@ private WebElement generalinformationBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction2() throws InterruptedException {
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
 	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
