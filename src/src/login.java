@@ -28,9 +28,9 @@ public class login  {
 		driver.get("https://opensource-demo.orangehrmlive.com"); // no access to c1 , c2, c3
 		driver.manage().window().maximize();
         username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));// c1
-        driver.findElement(By.id(String.valueOf(usernameField))).getText();
+        driver.findElement(By.id(String.valueOf(username))).getText();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
-        driver.findElement(By.id(String.valueOf(passwordField))).getText();
+        driver.findElement(By.id(String.valueOf(password))).getText();
 
 	  
 
