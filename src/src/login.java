@@ -22,7 +22,7 @@ public class login  {
 	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
-	                 System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");//here se.
+	                 System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");//here se.
 	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com"); // no access to c1 , c2, c3
@@ -54,7 +54,7 @@ driver.quit();
 	
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction1(){
- System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+ System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
 	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -87,7 +87,7 @@ driver.quit();
     }
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction2(){
-         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.get("https://opensource-demo.orangehrmlive.com/");
