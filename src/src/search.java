@@ -15,7 +15,7 @@ import static jdk.internal.agent.Agent.getText;
 
 public class search {
 
-    private WebDriver driver;
+    private WebDriver driver;//de
     private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));;
     private WebElement profileDropdown;
     private WebElement searchBtn;
@@ -32,23 +32,23 @@ private WebElement disabledBtn;
 
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void SearchFunction() throws InterruptedException {
- 	  System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");// here se.
+ 	  System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
 	    driver = new ChromeDriver();
-		driver.get("https://opensource-demo.orangehrmlive.com/");// no access to c1 , c2, c3, c4
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));// c1
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
           driver.findElement(By.id(String.valueOf(username))).getText();
-        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
 		  driver.findElement(By.id(String.valueOf(password))).getText();
 
-        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c3
+        loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
          driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
         Thread.sleep(3000);
 
 
-        leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c4
+        leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(leaveTab))).click();
 
         usernameText.findElement(By.xpath("//textarea"));
