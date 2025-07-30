@@ -68,8 +68,6 @@ driver.quit();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         driver.findElement(By.id(String.valueOf(password))).getText();
 
-
-
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
