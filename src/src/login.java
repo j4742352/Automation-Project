@@ -15,8 +15,8 @@ public class login  {
     private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));;
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
-        private WebElement usernameField;
-        private WebElement passwordField;
+        private WebElement username;
+        private WebElement password;
         private WebElement loginBtn;
         private WebElement Mainenantce;
 	
@@ -27,14 +27,12 @@ public class login  {
 
 		driver.get("https://opensource-demo.orangehrmlive.com"); // no access to c1 , c2, c3
 		driver.manage().window().maximize();
-        usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));// c1
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));// c1
         driver.findElement(By.id(String.valueOf(usernameField))).getText();
-        passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));// c2
         driver.findElement(By.id(String.valueOf(passwordField))).getText();
 
-	      // Enter the credentials
-        usernameField.sendKeys("Admin");
-        passwordField.sendKeys("admin123");
+	  
 
 
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));// c3
@@ -65,14 +63,12 @@ driver.quit();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
 
-        usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-        driver.findElement(By.id(String.valueOf(usernameField))).getText();
-        passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
-        driver.findElement(By.id(String.valueOf(passwordField))).getText();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
 
-	     // Enter the credentials
-        usernameField.sendKeys("Admin");
-        passwordField.sendKeys("admin123");
+
 
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
@@ -102,14 +98,12 @@ driver.quit();
         driver.get("https://opensource-demo.orangehrmlive.com/");
         driver.manage().window().maximize();
 
-        usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-        driver.findElement(By.id(String.valueOf(usernameField))).getText();
-        passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
-        driver.findElement(By.id(String.valueOf(passwordField))).getText();
+        username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        driver.findElement(By.id(String.valueOf(username))).getText();
+        password= wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        driver.findElement(By.id(String.valueOf(password))).getText();
 
-	     // Enter the credentials
-        usernameField.sendKeys("Admin");
-        passwordField.sendKeys("admin123");
+	   
 
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
