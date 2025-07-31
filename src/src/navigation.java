@@ -38,7 +38,7 @@ private WebElement generalinformationBtn;
     @Test
     public  <WebDriver, WebDriverWait, WebElement> void NavigationFunction() throws InterruptedException {
  System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
-	   driver = new ChromeDriver();
+
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
         username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
