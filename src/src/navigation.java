@@ -19,7 +19,7 @@ public class navigation {
     private WebElement username;
     private WebElement password;
     private WebElement loginBtn;
-    private WebDriver driver;//de
+    private WebDriver driver = new ChromeDriver();//de
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     private WebElement Btn;
     private WebElement timeTab;
