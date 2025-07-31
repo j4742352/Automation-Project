@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class login  {
-	private WebDriver driver = new ChromeDriver();   //de
+	private WebDriver driver = new ChromeDriver();  
     private WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
     private WebElement profileDropdown;
 	  private WebElement PIMtab;
@@ -23,7 +23,6 @@ public class login  {
     @Test
     public <WebDriver, WebDriverWait, WebElement> void LoginFunction(){
 	                 System.setProperty("webdriver.chrome.driver", "target/chromedriver.exe");
-	   driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com"); 
 		driver.manage().window().maximize();
