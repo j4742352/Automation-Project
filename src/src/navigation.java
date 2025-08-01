@@ -19,7 +19,7 @@ public class navigation {
     private WebElement username;
     private WebElement password;
     private WebElement loginBtn;
-    private WebDriver driver = new ChromeDriver();//de
+    private WebDriver driver = new ChromeDriver();
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     private WebElement Btn;
     private WebElement timeTab;
@@ -51,6 +51,9 @@ private WebElement generalinformationBtn;
 
         timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
         driver.findElement(By.id(String.valueOf(timeTab))).click();
+	    
+     Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         attendanceBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Attendance']")));
          driver.findElement(By.id(String.valueOf(attendanceBtn))).click();
@@ -105,14 +108,29 @@ private WebElement generalinformationBtn;
 
         Thread.sleep(3000);
 
+	         Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
          driver.findElement(By.id(String.valueOf(adminTab))).click();
 
+	         Actions action3 = new Actions(driver);
+        action3.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         qualificationsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Qualifications']/parent::a")));
        driver.findElement(By.id(String.valueOf(qualificationsBtn))).click();
 
+	         Actions action4 = new Actions(driver);
+        action4.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+
         skillsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Skills']/parent::a")));
          driver.findElement(By.id(String.valueOf(skillsBtn))).click();
+
+	         Actions action5 = new Actions(driver);
+        action5.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
 
         addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
        driver.findElement(By.id(String.valueOf(addBtn))).click();
@@ -136,6 +154,9 @@ private WebElement generalinformationBtn;
 
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
+
+	         Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
 
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
@@ -187,9 +208,17 @@ private WebElement generalinformationBtn;
 
         Thread.sleep(3000);
 
+	         Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+
         jobBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job")));
        driver.findElement(By.id(String.valueOf(jobBtn))).click();
 
+	         Actions action3 = new Actions(driver);
+        action3.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         jobtitlesBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Job Title")));
        driver.findElement(By.id(String.valueOf(jobtitlesBtn))).click();
 
@@ -219,14 +248,22 @@ private WebElement generalinformationBtn;
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
+     Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
         driver.findElement(By.id(String.valueOf(adminTab))).click();
 
+     Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         timeTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Time']/parent::a")));
         driver.findElement(By.id(String.valueOf(timeTab))).click();
 
+     Actions action3 = new Actions(driver);
+        action3.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         projectInfoBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Project Info']/parent::a")));
 driver.findElement(By.id(String.valueOf(projectInfoBtn))).click();
 
@@ -265,15 +302,25 @@ driver.findElement(By.id(String.valueOf(projectInfoBtn))).click();
         driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
 
+     Actions action4 = new Actions(driver);
+        action4.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Admin']/parent::a")));
         driver.findElement(By.id(String.valueOf(adminTab))).click();
 
+     Actions action5 = new Actions(driver);
+        action5.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         organizationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("Organization")));
         driver.findElement(By.id(String.valueOf(organizationBtn))).click();
  Thread.sleep(3000);
 
+     Actions action6 = new Actions(driver);
+        action6.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
-        generalinformationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("General Information")));
+ generalinformationBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("General Information")));
 driver.findElement(By.id(String.valueOf(generalinformationBtn))).click();
 
         addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[button()='Add']/parent::a")));
