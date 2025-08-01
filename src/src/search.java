@@ -40,7 +40,7 @@ private WebElement disabledBtn;
           driver.findElement(By.id(String.valueOf(username))).getText();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
 		  driver.findElement(By.id(String.valueOf(password))).getText();
-
+ Thread.sleep(3000);
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
          driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
@@ -75,7 +75,7 @@ private WebElement disabledBtn;
         driver.findElement(By.id(String.valueOf(username))).getText();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         driver.findElement(By.id(String.valueOf(password))).getText();
-
+ Thread.sleep(3000);
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
@@ -95,10 +95,17 @@ private WebElement disabledBtn;
 
         switch (choice) { // Evaluate the 'choice' variable
             case 1: // If choice is 1
-                System.out.println("Admin");
+   //Click on dropdown down arrow element
+                driver.findElement(xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")).click();
+//Click on ESS element
+                driver.findElement(xpath("(//div[@role='listbox']//child::div)[2]")).click();
+			
                 break; // Exit the switch statement
             case 2: // If choice is 2
-                System.out.println("ESS");
+  //Click on dropdown down arrow element
+                driver.findElement(xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")).click();
+//Click on ESS element
+                driver.findElement(xpath("(//div[@role='listbox']//child::div)[3]")).click();
                 break;
             default: // If none of the above cases match
                 System.out.println("Invalid choice. Please enter 1 or 2");
@@ -125,7 +132,7 @@ private WebElement disabledBtn;
         driver.findElement(By.id(String.valueOf(username))).getText();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         driver.findElement(By.id(String.valueOf(password))).getText();
-
+ Thread.sleep(3000);
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
@@ -159,7 +166,7 @@ private WebElement disabledBtn;
         driver.findElement(By.id(String.valueOf(username))).getText();
         password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         driver.findElement(By.id(String.valueOf(password))).getText();
-
+ Thread.sleep(3000);
         loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
