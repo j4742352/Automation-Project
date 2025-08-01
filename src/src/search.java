@@ -46,6 +46,8 @@ private WebElement disabledBtn;
 
         Thread.sleep(3000);
 
+     Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         leaveTab  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Login']")));
         driver.findElement(By.id(String.valueOf(leaveTab))).click();
@@ -55,6 +57,10 @@ private WebElement disabledBtn;
         usernameText.sendKeys((CharSequence) username1);
         Thread.sleep(3000);
 
+     Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
        driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
@@ -80,6 +86,10 @@ private WebElement disabledBtn;
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
 	    Thread.sleep(3000);
+
+	         Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
        driver.findElement(By.id(String.valueOf(adminTab))).click();
 
@@ -98,14 +108,14 @@ private WebElement disabledBtn;
    //Click on dropdown down arrow element
                 driver.findElement(xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")).click();
 //Click on ESS element
-                driver.findElement(xpath("(//div[@role='listbox']//child::div)[2]")).click();
+                driver.findElement(xpath("(//div[@role='lightbox']//child::div)[2]")).click();
 			
                 break; // Exit the switch statement
             case 2: // If choice is 2
   //Click on dropdown down arrow element
                 driver.findElement(xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")).click();
 //Click on ESS element
-                driver.findElement(xpath("(//div[@role='listbox']//child::div)[3]")).click();
+                driver.findElement(xpath("(//div[@role='lightbox']//child::div)[3]")).click();
                 break;
             default: // If none of the above cases match
                 System.out.println("Invalid choice. Please enter 1 or 2");
@@ -114,6 +124,10 @@ private WebElement disabledBtn;
 
         input.close(); // Close the scanner
 
+     Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+
+	    
         searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
         driver.findElement(By.id(String.valueOf(searchBtn))).click();
         Thread.sleep(3000);
@@ -138,6 +152,9 @@ private WebElement disabledBtn;
 
  Thread.sleep(3000);
 
+	     Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
+    
       //adminTab
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
         driver.findElement(By.id(String.valueOf(adminTab))).click();
@@ -145,6 +162,9 @@ private WebElement disabledBtn;
         EmployeeNameText.findElement(By.xpath("//textarea"));
         EmployeeNameText.sendKeys("Employee Name");
         Thread.sleep(3000);
+	    
+     Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         //searchBtn
         searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='Search']")));
@@ -171,6 +191,9 @@ private WebElement disabledBtn;
         driver.findElement(By.id(String.valueOf(loginBtn))).click();
 
         Thread.sleep(3000);
+	    
+     Actions action1 = new Actions(driver);
+        action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]"))).build().perform();
 
         adminTab = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//span[text()='Leave']/parent::a")));
         driver.findElement(By.id(String.valueOf(adminTab))).click();
